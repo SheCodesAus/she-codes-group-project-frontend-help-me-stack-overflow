@@ -57,6 +57,14 @@ a{
 
 }
 
+.rectangle {
+    height: 6px;
+    width: 100px;
+    background-color: #6750A4;
+    border-radius:10px;
+    }
+
+
 .primary-button{
     display: flex;
     width: max-content;

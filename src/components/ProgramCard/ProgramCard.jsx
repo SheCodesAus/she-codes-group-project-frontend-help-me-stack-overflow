@@ -18,7 +18,7 @@ function ProjectCard(props) {
               <div className="card-content">
                 <h3>{projectData.title}</h3>
                 <div className="location">{projectData.location}</div>
-                <p>Course description:</p>
+                <p className="title">What you'll learn:</p>
                 <div className="description"> {projectData.description}</div>
               </div>
             </div>

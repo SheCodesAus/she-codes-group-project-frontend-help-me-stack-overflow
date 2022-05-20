@@ -41,9 +41,9 @@ function HomePage() {
     <div className="hero-banner-wrapper">
         <div className="hero-banner">
                 <div className="hero-banner-text">
-                    <h1>Tranform people’s life through education</h1>
-                    <p>Young talents around the world are working on enriching their lives by moving into new careers. 
-        Help them to change their lives.</p>
+                    <h1>Learn</h1>
+                    <div className="rectangle"></div>
+                    <p>We run three types of programs ranging from one day through to six month programs teaching technical skills.</p>
                     <div className="spacer1"></div>
                     <Link to="/projects/create" className="primary-button">Sign up today</Link>
                     
