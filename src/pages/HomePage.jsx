@@ -7,7 +7,7 @@
 // export default HomePage
 
 import React, {useState, useEffect} from "react";
-
+import cupcakes from "./image/cupcakes.jpeg";
 
 import {Link} from "react-router-dom";
 
@@ -38,25 +38,21 @@ function HomePage() {
 
   return (
     <main>
-      <div className="hero-banner">
-          <div className="hero-banner-text">
-              <h1>Tranform people’s life through education</h1>
-              <p>Young talents around the world are working on enriching their lives by moving into new careers. 
-Help them to change their lives.</p>
-              <div className="spacer1"></div>
-              <Link to="/projects/create" className="primary-button">Sign up today</Link>
-          </div>
-          
-      </div>
-      <div className="mid-section">
-       
-        <div className="mid-section-text">
-                <h1>Become an instructor</h1>
-                <p>Share your industry experience by donating a little bit of time. 
-Your story will inspire many young talents.</p>
-                
-        </div>
-      </div>
+    <div className="hero-banner-wrapper">
+        <div className="hero-banner">
+                <div className="hero-banner-text">
+                    <h1>Tranform people’s life through education</h1>
+                    <p>Young talents around the world are working on enriching their lives by moving into new careers. 
+        Help them to change their lives.</p>
+                    <div className="spacer1"></div>
+                    <Link to="/projects/create" className="primary-button">Sign up today</Link>
+                    
+                </div>
+                <img className="hero-image" width="px" src={ cupcakes } alt="bannerimg" />
+            </div>
+    </div>
+    
+
 
       <div className="project-section">
       <div className="section-header">
