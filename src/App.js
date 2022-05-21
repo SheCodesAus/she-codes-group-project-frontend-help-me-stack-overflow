@@ -10,6 +10,7 @@ import Nav from "./components/Nav/Nav";
 
 //pages 
 import HomePage from "./pages/HomePage";
+import ProgramPage from "./pages/ProgramPage";
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
         <Nav />
 
         <Routes>
-          <Route path="/" element={<HomePage />} />        
+          <Route path="/" element={<HomePage />} />   
+          <Route path="/programs/:id" element={<ProgramPage />} />     
         </Routes>
       </div>
     </Router>
