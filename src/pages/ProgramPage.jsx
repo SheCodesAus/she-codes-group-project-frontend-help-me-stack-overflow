@@ -42,18 +42,20 @@ console.log(projectData)
     <>
       <div className="spacer"></div>
 
-      <div className="pledge-section">
+      <div className="program-section">
         <h3>Classes:</h3>
         
-        <div className="pledge-details">
+        <div className="program-details">
          
-          <div className="pledge-details-text">
+          <div className="program-details-text">
               
               <h3>{projectData.title}</h3>
               <p>What you will be studying:</p>
               <h3 className="description">{projectData.description}</h3>
               <div>Created at: {projectData.date_created}</div>
+              <div>{projectData.coding_languages}</div>
               <img className="project-img" src={projectData.image} alt="the project"/> 
+              
               
             
           </div>
