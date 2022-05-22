@@ -51,12 +51,13 @@ console.log(projectData)
               
               <h3>{projectData.title}</h3>
               <p>What you will be studying:</p>
-              <h3 className="description">{projectData.description}</h3>
+              <p className="description">{projectData.description}</p>
               <div>Created at: {projectData.date_created}</div>
+              <div>Location: {projectData.location}</div>
               <div>{projectData.coding_languages}</div>
+              <div>{projectData.mentors}</div>
               <img className="project-img" src={projectData.image} alt="the project"/> 
-              
-              
+               
             
           </div>
             
