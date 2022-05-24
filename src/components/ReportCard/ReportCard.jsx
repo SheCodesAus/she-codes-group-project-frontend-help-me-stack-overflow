@@ -17,8 +17,10 @@ function ReportCard(props) {
         <Link to={`/report/${reportData.id}`}>
                 
             <div className="report-card">
+            
          
               <div className="card-content">
+                
                 <div className="first-row-wrapper">
                   <h3 className="location">{reportData.location}</h3>
                   <button>Download report</button>
@@ -27,20 +29,27 @@ function ReportCard(props) {
                 <div className="info-card-wrapper">
 
                   <div className="card1-wrapper">
-                    <FontAwesomeIcon icon={faCoffee} />
-                    <div className="card-text-label">Total attendance</div>
-                    <div className="total">{reportData.total_attendance}</div>
+                    <div className="inner-wrapper">
+                      <FontAwesomeIcon icon={faCoffee} />
+                      <div className="card-text-label">Total attendance</div>
+                      <div className="total">{reportData.total_attendance}</div>
+                    </div>
+                    
                     
                   </div>
 
                   <div className="card2-wrapper">
-                    <FontAwesomeIcon icon={faAnchor} />
-                    <div className="card-text-label">Transition to tech</div>
-                    <div className="total">{reportData.transition_to_tech}</div>
+                    <div className="inner-wrapper">
+                      <FontAwesomeIcon icon={faAnchor} />
+                      <div className="card-text-label">Transition to tech</div>
+                      <div className="total">{reportData.transition_to_tech}</div>
+                    </div>
+                    
                     
                   </div>
 
                   <div className="card3-wrapper">
+                    
                     <FontAwesomeIcon icon={faComputer} /> 
                     <div className="card-text-label">Alumni to mentor</div>
                     <div className="total">{reportData.alumni_to_mentor}</div>

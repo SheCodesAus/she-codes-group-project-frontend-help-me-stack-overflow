@@ -2,6 +2,7 @@
 import React, {useState, useEffect} from "react";
 
 import {Link} from "react-router-dom";
+import lady from "./image/lady.webp";
 
 // Components
 
@@ -31,9 +32,22 @@ function SponsorPage() {
   
       <div className="report-section">
         <div className="section-header">
-            <h2>Reports</h2>
+        <div className="hero-banner-wrapper">
+        <div className="hero-banner">
+                <div className="hero-banner-text">
+                    <h1>Reports</h1>
+                    <div className="rectangle"></div>
+                    <p>Reports for sponsors</p>
+                    <div className="spacer1"></div>
+                    {/* <Link to="/projects/create" className="primary-button">Sign up today</Link> */}
+                    
+                </div>
+                <img className="hero-image" width="200px" src={ lady } alt="bannerimg" />
+            </div>
         </div>
-        
+            
+        </div>
+        <div className="spacer1"></div>
 
         <div className="report-list">
         {reportList.map((reportData) => {
