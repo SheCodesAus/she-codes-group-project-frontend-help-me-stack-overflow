@@ -23,7 +23,7 @@ function ReportCard(props) {
                 
                 <div className="first-row-wrapper">
                   <h3 className="location">{reportData.location}</h3>
-                  <button>Download report</button>
+            
                 </div>
                 
                 <div className="info-card-wrapper">
@@ -49,21 +49,24 @@ function ReportCard(props) {
                   </div>
 
                   <div className="card3-wrapper">
-                    
-                    <FontAwesomeIcon icon={faComputer} /> 
-                    <div className="card-text-label">Alumni to mentor</div>
-                    <div className="total">{reportData.alumni_to_mentor}</div>
-                    
+                    <div className="inner-wrapper">
+                      <FontAwesomeIcon icon={faComputer} /> 
+                      <div className="card-text-label">Alumni to mentor</div>
+                      <div className="total">{reportData.alumni_to_mentor}</div>
+                    </div>
                   </div>
 
                   <div className="card4-wrapper">
-                    <FontAwesomeIcon icon={faCode} />
-                    <div className="card-text-label">Coding languages:</div>
-                    <div className="card-text-sml">{reportData.coding_languages}</div>
+                    <div className="inner-wrapper">
+                      <FontAwesomeIcon icon={faCode} />
+                      <div className="card-text-label">Coding languages:</div>
+                      <div className="card-text-sml">{reportData.coding_languages}</div>
+                    </div>
+                    
                   </div>
                 </div>
              
-          
+    
               </div>
               {/* <div className="card-text-sml"> {reportData.program_date}</div> */}
             </div>
