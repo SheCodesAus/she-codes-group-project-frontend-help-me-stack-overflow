@@ -14,7 +14,7 @@ function ReportCard(props) {
   
         <div className="report-card">
        
-        <Link to={`/report/${reportData.id}`}>
+        <div to={`/report/${reportData.id}`}>
                 
             <div className="report-card">
             
@@ -70,7 +70,7 @@ function ReportCard(props) {
               </div>
               {/* <div className="card-text-sml"> {reportData.program_date}</div> */}
             </div>
-        </Link>
+        </div>
         </div>
   );
 }
