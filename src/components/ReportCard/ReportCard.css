@@ -34,7 +34,7 @@
     flex-direction: row;
     
 } */
-.card1-wrapper, .card2-wrapper, .card3-wrapper, .card4-wrapper{
+.card0-wrapper,.card1-wrapper, .card2-wrapper, .card3-wrapper, .card4-wrapper, .card5-wrapper{
     /* display: grid; */
     height: 100%;
     grid-auto-rows: auto auto 1fr auto;
@@ -44,6 +44,10 @@
 
 .inner-wrapper{
     margin: 10px;
+}
+.card0-wrapper{
+    background-color:#E4F0F6;
+    border:solid #c6e1ee;
 }
 .card1-wrapper{
     background-color: #e8dff5;
@@ -62,6 +66,11 @@
     background-color: #ddedea;
     border:solid #c3dbd7;
 }
+.card5-wrapper{
+    background-color: #F4F1FA;
+    border:solid #eae4f8;
+}
+
 .total{
     font-size: 20px;
 }

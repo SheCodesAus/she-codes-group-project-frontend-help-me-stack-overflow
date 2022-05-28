@@ -2,7 +2,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee,faAnchor,faComputer,faCode} from '@fortawesome/free-solid-svg-icons';
+import { faCoffee,faAnchor,faComputer,faCode, faSchool, faSailboat} from '@fortawesome/free-solid-svg-icons';
 
 
 //styles
@@ -28,14 +28,20 @@ function ReportCard(props) {
                 
                 <div className="info-card-wrapper">
 
+                  <div className="card0-wrapper">
+                    <div className="inner-wrapper">
+                      <FontAwesomeIcon icon={faSailboat} />
+                      <div className="card-text-label">Program</div>
+                      <div className="total">She Codes Plus</div>
+                    </div> 
+                  </div>
+
                   <div className="card1-wrapper">
                     <div className="inner-wrapper">
                       <FontAwesomeIcon icon={faCoffee} />
                       <div className="card-text-label">Total attendance</div>
                       <div className="total">{reportData.total_attendance}</div>
-                    </div>
-                    
-                    
+                    </div> 
                   </div>
 
                   <div className="card2-wrapper">
@@ -57,6 +63,14 @@ function ReportCard(props) {
                   </div>
 
                   <div className="card4-wrapper">
+                    <div className="inner-wrapper">
+                      <FontAwesomeIcon icon={faCoffee} />
+                      <div className="card-text-label">Transition to other study</div>
+                      <div className="total">{reportData.transition_to_other_study}</div>
+                    </div> 
+                  </div>
+
+                  <div className="card5-wrapper">
                     <div className="inner-wrapper">
                       <FontAwesomeIcon icon={faCode} />
                       <div className="card-text-label">Coding languages:</div>
