@@ -2,7 +2,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee,faAnchor,faComputer,faCode, faSchool, faSailboat} from '@fortawesome/free-solid-svg-icons';
+import { faCoffee,faAnchor,faComputer,faCode, faSailboat} from '@fortawesome/free-solid-svg-icons';
 
 
 //styles
