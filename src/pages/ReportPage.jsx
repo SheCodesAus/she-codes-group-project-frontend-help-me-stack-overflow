@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
 
 //Styles
-import "./ProgramPage.css"
+// import "./ProgramPage.css"
 
 // Components
 
@@ -11,9 +11,9 @@ import "./ProgramPage.css"
 // import { projectData } from "../data";
 
 
-function ProgramPage() {
+function ReportPage() {
 // State
-const [projectData, setProjectData] = useState([]);
+const [reportData, setReportData] = useState([]);
 
 //Hooks useParams listens to the url, destruct the object, and I can grab the Id value. a path parameter
 const {id} = useParams();
@@ -22,20 +22,20 @@ const {id} = useParams();
   //Action and Helpers
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL}programs/${id}`)
+    fetch(`${process.env.REACT_APP_API_URL}report/${id}`)
     .then((results) => {
     return results.json();
     })
     .then((data) => {
-    setProjectData(data);
+    setReportData(data);
     });
   }, [id]);
 
 // Loading state
-if (!projectData){
+if (!reportData){
   return <h3>Loading project...</h3>;
 }
-console.log(projectData)
+console.log(reportData)
 //Normal state
   return (
     <>
@@ -48,14 +48,12 @@ console.log(projectData)
          
           <div className="program-details-text">
               
-              <h3>{projectData.title}</h3>
+              
               <p>What you will be studying:</p>
-              <p className="description">{projectData.description}</p>
-              <div>Created at: {projectData.date_created}</div>
-              <div>Location: {projectData.location}</div>
-              <div>{projectData.coding_languages}</div>
-              <div>{projectData.mentors}</div>
-              <img className="project-img" src={projectData.image} alt="the project"/> 
+              
+            
+              <div>Location: {reportData.location}</div>
+              
                
             
           </div>
@@ -70,5 +68,5 @@ console.log(projectData)
   );
 }
 
-export default ProgramPage;
+export default ReportPage;
 
