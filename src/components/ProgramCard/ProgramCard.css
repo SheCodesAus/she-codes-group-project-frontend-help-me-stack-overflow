@@ -28,7 +28,7 @@ p{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    /* text-align: center; */
     background-color: white;
     z-index: 0;
     position: relative;
@@ -87,8 +87,9 @@ p{
     border-radius: 120px;
   }
   
-  .card-content{
+  .student-section .card-info{
     /* font-family: roboto; */
+
     text-align: left;
     margin: 0;
     padding: 0 16px 16px 16px;
@@ -98,7 +99,7 @@ p{
     color: black;
   }
  
-  .location{
+  .student-section .location{
     font-size: 16px;
     display: inline-block;
     padding: 0 16px;
@@ -106,6 +107,6 @@ p{
     line-height: 30px;
     border-radius: 30px;
     margin: 0 auto;
-    background-color:#D6EAD6
+    background-color:#DDD5F0;
     }
     

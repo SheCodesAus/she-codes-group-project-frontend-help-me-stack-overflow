@@ -15,7 +15,7 @@ function ProjectCard(props) {
             <img src={projectData.image} alt="the project"/>
             <div className="student-section">
          
-              <div className="card-content">
+              <div className="card-info">
                 <h3>{projectData.title}</h3>
                 <div className="location">{projectData.location}</div>
                 <p className="title">What you'll learn:</p>
