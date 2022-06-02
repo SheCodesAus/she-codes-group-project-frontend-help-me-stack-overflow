@@ -1,0 +1,40 @@
+
+
+
+label {
+    padding: 0.5rem 1rem;
+    text-decoration: underline;
+    font: bolder;
+}
+
+.login-button{
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+    margin: 4px;
+
+    /* font-size: 1.25rem; */
+    line-height: 1.5;
+    border-radius: 5px;
+    border-color: purple;
+}
+
+.submit-btn {
+    
+    /* padding: 0.5rem 1rem; */
+    /* font-size: 1.25rem; */
+    line-height: 1.5;
+    border-radius: 100px;
+    border-color: purple;
+
+}
+.text-input{
+    display: flex;
+    padding: 0.5rem 1rem;
+    /* font-size: 1.25rem; */
+    margin: 0.5rem 1rem;
+
+    /* line-height: 1.5; */
+    border-radius: 10px;
+    border-color: purple;
+}
+
