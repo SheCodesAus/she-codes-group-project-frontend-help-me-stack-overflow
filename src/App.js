@@ -11,6 +11,7 @@ import Nav from "./components/Nav/Nav";
 //pages 
 import HomePage from "./pages/HomePage";
 import ProgramPage from "./pages/ProgramPage";
+import AdminPage from "./pages/AdminPages/AdminPage";
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
 
         <Routes>
           <Route path="/" element={<HomePage />} />   
-          <Route path="/programs/:id" element={<ProgramPage />} />     
+          <Route path="/programs/:id" element={<ProgramPage />} />
+          <Route path="/admin" element={<AdminPage />}     />
         </Routes>
       </div>
     </Router>
