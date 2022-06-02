@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
 
+import together from "./image/together.jpeg";
+
 //Styles
 import "./ProgramPage.css"
 
@@ -39,22 +41,55 @@ console.log(projectData)
 //Normal state
   return (
     <>
+    <div className="intro-section-wrapper" >
+      <div className="intro-section">
+        <div className="intro-text">
+         <h2>Flash</h2>
+         <div>{projectData.description}</div>
+         
+         <div className="detail_wrapper">
+            <div className="in_line"> 
+              <div className="p_lable">Location:</div>
+              <div>{projectData.location}</div>
+            </div>
+
+            <div className="in_line">
+              <div className="p_lable">Mentor:</div>
+              <div>{projectData.mentors}</div>
+            </div>
+
+            <div className="in_line">
+              <div className="p_lable">Program date:</div>
+              <div>{projectData.date_created}</div>
+            </div>
+         </div>
+         
+        </div>
+        {/* <img className="intro-image" width="px" src={ together } alt="togetherimg" /> */}
+      </div>
+    </div>
+
+    
+    <div className="intro-img-wrapper">
+      <img className="intro-image" width="300px" src={ together } alt="togetherimg" />
+    </div>
+
       <div className="spacer"></div>
 
       <div className="program-section">
-        <h3>Classes:</h3>
+      
         
         <div className="program-details">
          
           <div className="program-details-text">
               
-              <h3>{projectData.title}</h3>
-              <p>What you will be studying:</p>
-              <p className="description">{projectData.description}</p>
-              <div>Created at: {projectData.date_created}</div>
-              <div>Location: {projectData.location}</div>
-              <div>{projectData.coding_languages}</div>
-              <div>{projectData.mentors}</div>
+
+              <div className="language_wrapper">
+                <h2>Languages you'll be learning:</h2>
+                <div>{projectData.coding_languages}</div>
+              </div>
+
+             
               <img className="project-img" src={projectData.image} alt="the project"/> 
                
             
