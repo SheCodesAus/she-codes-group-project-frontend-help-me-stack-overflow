@@ -15,6 +15,7 @@ import AdminPage from "./pages/AdminPages/AdminPage";
 import LoginPage from "./pages/LoginPage";
 import SponsorPage from "./pages/SponsorPage";
 import ReportPage from "./pages/ReportPage";
+import StudentFormPage from "./pages/StudentFormPage";
 
 
 function App() {
@@ -29,6 +30,8 @@ function App() {
           <Route path="/programs/:id" element={<ProgramPage />} /> 
           <Route path="/reports" element={<SponsorPage />} />  
           <Route path="/report/:id" element={<ReportPage />} />  
+          <Route path="/student" element={<StudentFormPage />} />  
+
 
         </Routes>
       </div>
