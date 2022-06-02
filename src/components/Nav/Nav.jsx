@@ -1,6 +1,6 @@
 // Imports
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 
 //styles
 import "./Nav.css";
@@ -11,6 +11,7 @@ function Nav() {
             <div className="left-nav">
                 <Link to="/">Home</Link>
                 <Link to="/program">Program</Link>
+                <Link to="/reports">Sponsor reports</Link>
             </div>
             <button className="login-btn">Login</button>
         </nav>
