@@ -1,70 +1,148 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 //styles
-// import "./AdminDash.css";
+// import "./AdminDashboard.css";
 
 function AdminDash() {
-  <div class="page">
-  <h1>A responsive table</h1>
- <table class="layout display responsive-table">
-     <thead>
-         <tr>
-             <th>Number</th>
-             <th colspan="2">Name</th>
-         </tr>
-     </thead>
-     <tbody>
- 
-         <tr>
-             <td class="organisationnumber">140406</td>
-             <td class="organisationname">Stet clita kasd gubergren, no sea takimata sanctus est</td>
-             <td class="actions">
-                 <a href="?" class="edit-item" title="Edit">Edit</a>
-                 <a href="?" class="remove-item" title="Remove">Remove</a>
-             </td>
-         </tr>
- 
-         <tr>
-             <td class="organisationnumber">140412</td>
-             <td class="organisationname">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat</td>
-             <td class="actions">
-                 <a href="?" class="edit-item" title="Edit">Edit</a>
-                 <a href="?" class="remove-item" title="Remove">Remove</a>
-             </td>
-         </tr>
- 
-         <tr>
-             <td class="organisationnumber">140404</td>
-             <td class="organisationname">Vel illum dolore eu feugiat nulla facilisis at vero eros</td>
-             <td class="actions">
-                 <a href="?" class="edit-item" title="Edit">Edit</a>
-                 <a href="?" class="remove-item" title="Remove">Remove</a>
-             </td>
-         </tr>
- 
-         <tr>
-             <td class="organisationnumber">140408</td>
-             <td class="organisationname">Iusto odio dignissim qui blandit praesent luptatum zzril delenit</td>
-             <td class="actions">
-                 <a href="?" class="edit-item" title="Edit">Edit</a>
-                 <a href="?" class="remove-item" title="Remove">Remove</a>
-             </td>
-         </tr>
- 
-         <tr>
-             <td class="organisationnumber">140410</td>
-             <td class="organisationname">
-                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam
-             </td>
-             <td class="actions">
-                 <a href="?" class="edit-item" title="Edit">Edit</a>
-                 <a href="?" class="remove-item" title="Remove">Remove</a>
-             </td>
-         </tr>
- 
-     </tbody>
- </table>
- </div>
+
+      
+
+    return <div class="page">
+
+<div>
+    <br/>
+        <div className="spacer1"></div>
+    <hr/> 
+</div>
+        
+    <div className="navbar">    
+        <h1>Students </h1>    
+        <input type="search" className="create-btn" placeholder="Filter by Title"></input>   
+        <button className="create-btn"><Link to="/student">Create new</Link></button>        
+    </div>
+
+    
+  
+   <table class="layout display responsive-table">
+       <thead>
+           <tr>
+               <th>Student</th>
+               <th colspan="1">Status</th>
+               <th colspan="1">Date</th>
+               <th colspan="1">Location</th>
+               <th colspan="2">Action</th>
+
+
+           </tr>
+       </thead>
+       <tbody>
+   
+           <tr>
+               <td class="organisationnumber">Manali <br/>manali@cavamail.com</td>
+               <td class="organisationname">Alumni, </td>
+               <td class="organisationname">2020</td>
+               <td class="organisationname">WA</td>             
+
+
+               <td class="actions">
+                   <a href="?" class="edit-item" title="Edit">Edit</a>
+                   <a href="?" class="remove-item" title="Remove">Remove</a>
+               </td>
+           </tr>   
+       </tbody>
+   </table>
+
+<div>
+    <br/>
+        <div className="spacer1"></div>
+    <hr/> 
+</div>
+
+<div className="box-wrap">
+   <div className="navbar">    
+        <h1>Programs </h1>    
+        <input type="search" className="create-btn" placeholder="Filter by Title"></input>   
+        <button className="create-btn"><Link to="/student">Create new</Link></button>  
+    </div>
+
+   <table class="layout display responsive-table">
+       <thead>
+           <tr>
+               <th>Programs</th>
+               <th colspan="1">Status</th>
+               <th colspan="1">Date</th>
+               <th colspan="1">Location</th>
+               <th colspan="2">Action</th>
+
+
+           </tr>
+       </thead>
+       <tbody>
+   
+           <tr>
+               <td class="organisationnumber">One Day Workshop <br/></td>
+               <td class="organisationname">Open </td>
+               <td class="organisationname">2020</td>
+               <td class="organisationname">WA</td>             
+
+
+               <td class="actions">
+                   <a href="?" class="edit-item" title="Edit">Edit</a>
+                   <a href="?" class="remove-item" title="Remove">Remove</a>
+               </td>
+           </tr>   
+       </tbody>
+   </table>
+</div>
+
+<div>
+    <br/>
+        <div className="spacer1"></div>
+    <hr/> 
+</div>
+
+<div className="box-wrap">
+   <div className="navbar">    
+        <h1>Reports </h1>    
+        <input type="search" className="create-btn" placeholder="Filter by Title"></input>   
+        <button className="create-btn"><Link to="/student">Create new</Link></button>  
+    </div>
+
+   <table class="layout display responsive-table">
+       <thead>
+           <tr>
+               <th colspan="1">Report</th>            
+               <th colspan="1">Report Number</th>
+               <th colspan="1">Date</th>
+               <th colspan="2">Action</th>
+
+
+           </tr>
+       </thead>
+       <tbody>
+   
+           <tr>
+               <td class="organisationnumber">Workshops <br/></td>               
+               <td class="organisationname">2</td>               
+               <td class="organisationname">2020</td>             
+
+
+               <td class="actions">
+                   <a href="?" class="edit-item" title="Edit">Edit</a>
+                   <a href="?" class="remove-item" title="Remove">Remove</a>
+               </td>
+           </tr>   
+       </tbody>
+   </table>
+</div>
+
+
+
+
+   </div>
+
+   
 }
 
   export default AdminDash;
