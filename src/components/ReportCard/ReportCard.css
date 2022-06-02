@@ -12,8 +12,8 @@
 
 .card-content{
     display: grid;
-    width: 70%;
-    padding-left: 4rem;
+    width: 80%;
+    /* padding-left: 4rem; */
    
 }
 .info-card-wrapper{
