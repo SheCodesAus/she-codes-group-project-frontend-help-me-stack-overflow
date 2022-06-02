@@ -70,7 +70,7 @@ function HomePage() {
       </div>
     </div>
     <div className="intro-img-wrapper">
-    <img className="intro-image" width="300px" src={ together } alt="togetherimg" />
+      <img className="intro-image" width="300px" src={ together } alt="togetherimg" />
     </div>
      
 
