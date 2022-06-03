@@ -33,7 +33,7 @@ function Nav() {
         <nav className="navbar">
             <div className="left-nav">
                 <Link to="/">Home</Link>
-                <Link to="/program">Program</Link>
+                {/* <Link to="/program">Program</Link> */}
                 <Link to="/reports">Sponsor reports</Link>
             </div>
             <button className="login-btn">{checkUser()}</button>

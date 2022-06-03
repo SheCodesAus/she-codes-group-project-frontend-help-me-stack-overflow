@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
 
-import together from "./image/together.jpeg";
+import hug from "./image/hug.jpeg";
 
 //Styles
 import "./ProgramPage.css"
@@ -41,10 +41,10 @@ console.log(projectData)
 //Normal state
   return (
     <>
-    <div className="intro-section-wrapper" >
-      <div className="intro-section">
+    <div className="intro-section-wrapper2" >
+      <div className="intro-section-program">
         <div className="intro-text">
-         <h2>Flash</h2>
+         <h2>{projectData.title}</h2>
          <div>{projectData.description}</div>
          
          <div className="detail_wrapper">
@@ -63,41 +63,32 @@ console.log(projectData)
               <div>{projectData.date_created}</div>
             </div>
          </div>
-         
+       
         </div>
-        {/* <img className="intro-image" width="px" src={ together } alt="togetherimg" /> */}
+
+        <img className="intro-image" width="400px" src={ hug } alt="togetherimg" />
       </div>
     </div>
 
     
-    <div className="intro-img-wrapper">
-      <img className="intro-image" width="300px" src={ together } alt="togetherimg" />
-    </div>
-
-      <div className="spacer"></div>
 
       <div className="program-section">
       
         
         <div className="program-details">
          
-          <div className="program-details-text">
-              
-
               <div className="language_wrapper">
-                <h2>Languages you'll be learning:</h2>
-                <div>{projectData.coding_languages}</div>
+                <div className="language_text">
+                  <h2>Languages you'll be learning:</h2>
+                  <div>{projectData.coding_languages}</div>
+                </div>
               </div>
-
-             
               <img className="project-img" src={projectData.image} alt="the project"/> 
                
             
           </div>
             
-        </div>
-
-        
+      
       </div>
      
       <div className="spacer2"></div>
