@@ -73,8 +73,8 @@ import "./LoginForm.css";
          </button>
          <hr/>
                 
-         <button className="submit-btn" ><Link to="/">Return to Home</Link></button>
-         <button className="submit-btn" ><Link to="/admin">Admin</Link></button>
+         <button className="home-btn" ><Link to="/">Return to Home</Link></button>
+         <button className="home-btn" ><Link to="/admin">Admin</Link></button>
 
        </div>
      </form>
