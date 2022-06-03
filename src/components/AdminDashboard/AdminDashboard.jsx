@@ -52,15 +52,13 @@ function AdminDash() {
            </tr>   
        </tbody>    
    </table>
+   <div className="spacer1"></div>
+
    <div className="viewall-wrap">
         <button className="viewall-btn"><Link to="/student">View All</Link></button> 
    </div>
+<hr/> 
 
-<div>
-    <br/>
-        <div className="spacer1"></div>
-    <hr/> 
-</div>
 
 <div className="box-wrap">
    <div className="navbar">    
@@ -97,17 +95,14 @@ function AdminDash() {
            </tr>   
        </tbody>
    </table>
+   <div className="spacer1"></div>
 
    <div className="viewall-wrap">
-   <button className="viewall-btn"><Link to="/program">View All</Link></button> 
+    <button className="viewall-btn"><Link to="/program">View All</Link></button> 
    </div>
 </div>
-
-<div>
-    <br/>
-        <div className="spacer1"></div>
     <hr/> 
-</div>
+
 
 <div className="box-wrap">
    <div className="navbar">    
@@ -136,17 +131,20 @@ function AdminDash() {
 
 
                <td class="actions">
-                   <a href="?" class="edit-item" title="Edit">Edit</a>
+                   <a href="?" class="edit-item" title="Edit" >Edit</a>                   
                    <a href="?" class="remove-item" title="Remove">Remove</a>
                </td>
            </tr>   
        </tbody>
    </table>
 </div>
+<div className="spacer1"></div>
     <div className="viewall-wrap">
         <button className="viewall-btn"><Link to="/reports">View All</Link></button> 
    </div>
-
+   
+   <hr/>
+   
    </div>
 
    
