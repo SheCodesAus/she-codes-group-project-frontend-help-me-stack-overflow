@@ -19,7 +19,7 @@ function AdminDash() {
     <div className="navbar">    
         <h1>Students </h1>    
         <input type="search" className="create-btn" placeholder="Filter by Title"></input>   
-        <button className="create-btn"><Link to="/student">Create new</Link></button>        
+        <button className="create-btn"><Link to="/student/create">Create new</Link></button>        
     </div>
 
     
@@ -63,7 +63,7 @@ function AdminDash() {
    <div className="navbar">    
         <h1>Programs </h1>    
         <input type="search" className="create-btn" placeholder="Filter by Title"></input>   
-        <button className="create-btn"><Link to="/student">Create new</Link></button>  
+        <button className="create-btn"><Link to="/program/create">Create new</Link></button>  
     </div>
 
    <table class="layout display responsive-table">
@@ -106,7 +106,7 @@ function AdminDash() {
    <div className="navbar">    
         <h1>Reports </h1>    
         <input type="search" className="create-btn" placeholder="Filter by Title"></input>   
-        <button className="create-btn"><Link to="/student">Create new</Link></button>  
+        <button className="create-btn"><Link to="/report/create">Create new</Link></button>  
     </div>
 
    <table class="layout display responsive-table">
