@@ -2,7 +2,7 @@
     display: flex;
     align-items: flex-end;
     margin: 0% 10% 7% 2%;
-    padding: 0% 1% 3% 2%;
+    padding: 3%;
     flex-wrap: wrap;
     flex-direction: column;
     align-content: center;
@@ -29,7 +29,8 @@
     border-color: purple;
 }
 
-.student-btn{ 
+
+.report-btn{ 
     
     padding: 2px 7px;
     margin: 3px;
@@ -42,7 +43,7 @@
     border: 1px solid #1a1919;
 }
 
-.student-btn:hover  {
+.report-btn:hover  {
 
     color: #8246AF;
     background-color: #d4a9f5;

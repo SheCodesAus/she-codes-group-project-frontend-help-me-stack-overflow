@@ -31,6 +31,33 @@
     box-shadow: 0 1px 10px rgba(64, 33, 102, 0.419);
   }
 
+  
+
+  .viewall-btn {
+    padding: 0.5rem 1rem;
+      /* font-size: 1.25rem; */
+      background-color: white;
+      line-height: 1.5;
+      border-radius: 100px;
+      border-color: purple; 
+  }
+  .viewall-btn:hover {
+    padding: 0.5rem 1rem;
+      /* font-size: 1.25rem; */
+      background-color: #8247af96;
+      color: white;
+      line-height: 1.5;
+      border-radius: 100px;
+      border-color: rgb(182, 140, 251); 
+  }
+
+  .viewall-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+
   .create-btn{
     padding: 0.5rem 1rem;
     /* font-size: 1.25rem; */
@@ -46,8 +73,10 @@
     justify-content: space-between;
     align-items: flex-end;
     padding: 1rem 1.5em 1rem 1.5rem;
-    
+       
 };
+
+
 
 
 input {

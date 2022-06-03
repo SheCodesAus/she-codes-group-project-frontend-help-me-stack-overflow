@@ -16,6 +16,8 @@ import LoginPage from "./pages/LoginPage";
 import SponsorPage from "./pages/SponsorPage";
 import ReportPage from "./pages/ReportPage";
 import StudentFormPage from "./pages/StudentFormPage";
+import ReportFormPage from "./pages/ReportFormPage";
+import ProgramFormPage from "./pages/ProgramFormPage";
 
 
 function App() {
@@ -28,9 +30,11 @@ function App() {
           <Route path="/admin" element={<AdminPage />}     />
           <Route path="/login" element ={<LoginPage />} />
           <Route path="/programs/:id" element={<ProgramPage />} /> 
+          <Route path="/program/create" element={<ProgramFormPage />} />  
           <Route path="/reports" element={<SponsorPage />} />  
           <Route path="/report/:id" element={<ReportPage />} />  
-          <Route path="/student" element={<StudentFormPage />} />  
+          <Route path="/report/create" element={<ReportFormPage />} />  
+          <Route path="/student/create" element={<StudentFormPage />} />  
 
 
         </Routes>
