@@ -3,10 +3,13 @@ import React, { useState } from "react";
 // Imports
 import { Link, useNavigate } from "react-router-dom";
 
-function StudentForm(studentData) {
+import "./ReportForm.css";
+
+
+function ReportForm(reportData) {
   // State
-  const [student, postStudent] = useState(
-    studentData.map
+  const [report, postReport] = useState(
+    reportData.map
   );
 
   // // Hooks
@@ -15,50 +18,47 @@ function StudentForm(studentData) {
   // Actions and Helpers
   const handleChange = (event) => {
     const { id, value } = event.target;
-    postStudent((prevStudentData) => ({
-      ...prevStudentData,
+    postReport((prevReportData) => ({
+      ...prevReportData,
       [id]: value,
     }));
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();        
-    if (student.name && student.biography && student.contact_email && student.contact_phone && student.contact_email && student.location && student.demographic_gender
-      && student.date_created && student.demographic_nationality && student.social_linkedin && student.employment_company && student.employment_position && student.employment_industry
-     && student.employment_salary && student.program_attendence && student.coding_languages && student.social_github) 
+    if (report.location && report.demographic_gender && report.demographic_nationality && 
+        report.total_attendance && report.program_attendance && report.attendee_to_alumni && report.alumni_to_mentor && report.program_date && report.coding_languages
+     && report.transition_to_tech && report.transition_to_other_programs  && report.transition_to_other_study) 
     {
       try {
         const response = await fetch(
-          `${process.env.REACT_APP_API_URL}student/`,
+          `${process.env.REACT_APP_API_URL}reports/`,
           {
             method: "post",
             headers: {
               "Content-Type": "application/json",              
             },
             body: JSON.stringify({
-              name: student.title, 
-              biography: student.biography,
-              contact_phone: parseInt(student.contact_phone),
-              contact_email: student.contact_email,
-              location: student.location,
-              demographic_gender: student.demographic_gender,
-              date_created: new Date(student.date_created).toISOString(),
-              demographic_nationality: student.demographic_nationality,
-              social_github: student.social_github,
-              social_linkedin: student.social_linkedin,   
-              employment_company: student.employment_company,             
-              employment_position: student.employment_position,             
-              employment_industry: student.employment_industry,             
-              employment_salary: parseInt(student.employment_salary),             
-              program_attendence: student.program_attendence,           
-              coding_languages: student.coding_languages,          
+              location: report.location,             
+              demographic_gender: report.demographic_gender,              
+              demographic_nationality: report.demographic_nationality,
+              total_attendance: parseInt(report.total_attendance),
+              program_attendence: report.program_attendence,           
+              attendee_to_alumni: parseInt(report.attendee_to_alumni),   
+              alumni_to_mentor: parseInt(report.alumni_to_mentor),    
+              program_date: new Date(report.program_date).toISOString(),
+              coding_languages: report.coding_languages,            
+              transition_to_tech: parseInt(report.transition_to_tech),           
+              transition_to_other_programs: parseInt(report.transition_to_other_programs),           
+              transition_to_other_study: parseInt(report.transition_to_other_study),             
+                        
             }),
           }
         );
         const data = await response.json();
         console.log(data)
         // THIS IS HOW YOU NAVIGATE AUTOMATICALLY
-        navigate(`/`);
+        navigate(`/admin`);
         // navigate(`/`);
       } catch (err) {
         console.log(err);
@@ -68,106 +68,102 @@ function StudentForm(studentData) {
 
   const formFields = [
     {
-       id: "name",
-       label: "Name",
-       placeholder: "Enter title",
-       type: "text",
+      id: "location",
+      label: "Location:",
+      placeholder: "Enter Location",
+      type: "text",
+   },
+
+   {
+    id: "demographic_gender",
+    label: "Gender:",
+    placeholder: "Enter Gender",
+    type: "text",
     },
+
     {
-        id: "biography",
-        label: "Biography",
-        placeholder: "Enter description",
-        type: "text",
-    },
-    {
-        id: "contact_phone",
-        label: "Contact Phone",
-        placeholder: "Enter Phone",
-        type: "text",
-    },
-    {
-        id: "contact_email",
-        label: "Email",
-        placeholder: "Enter Email",
-        type: "email",
-    },
-        {
-       id: "location",
-       label: "Location",
-       placeholder: "Enter Location",
-       type: "text",
-    },
-    {
-        id: "date_created",
-        label: "Date created",
-        placeholder: "Enter title",
-        type: "date",
-    },
-    {
-        id: "demographic_nationality",
-        label: "Nationality",
-        placeholder: "Enter Nationality",
-        type: "text",
-    },
-    {
-      id: "demographic_gender",
-      label: "Gender",
-      placeholder: "Enter Gender",
+      id: "demographic_nationality",
+      label: "Nationality:",
+      placeholder: "Enter Nationality",
       type: "text",
     },
+
     {
-      id: "social_linkedin",
-      label: "Linkedin",
-      placeholder: "Enter link",
-      type: "url",
-    },
-    {
-      id: "social_github",
-      label: "Github",
-      placeholder: "Enter link",
-      type: "url",
-    },
-    {
-      id: "employment_industry",
-      label: "Employment Industry",
-      placeholder: "Enter Industry",
+      id: "total_attendence",
+      label: "Total Attendance:",
+      placeholder: "Enter amount",
       type: "text",
     },
-    {
-      id: "employment_position",
-      label: "Position",
-      placeholder: "Enter Position",
-      type: "text",
-    },
-    {
-      id: "employment_salary",
-      label: "Salary ",
-      placeholder: "Enter Salary",
-      type: "text",
-    },
+
     {
       id: "program_attendence",
-      label: "Programs",
-      placeholder: "Enter Programs",
+      label: "Program Attendance:",
+      placeholder: "Enter Amount",
       type: "text",
     },
+    
+    {
+        id: "attendee_to_alumni",
+        label: "Attendee to Alumni:",
+        placeholder: "Enter amount",
+        type: "text",
+    },
+
+    {
+      id: "alumni_to_attendee",
+      label: "Alumni to Attendee:",
+      placeholder: "Enter amount",
+      type: "text",
+    },
+      
+    {
+        id: "program_date",
+        label: "Date created",
+        placeholder: "Enter title:",
+        type: "date",
+    },  
+
     {
       id: "coding_languages",
       label: "Coding Languages",
-      placeholder: "Enter Languages",
+      placeholder: "Enter Languages:",
       type: "text",
     },
+
+    {
+      id: "transition_to_tech",
+      label: "Transitioned to Tech:",
+      placeholder: "Enter Amount",
+      type: "text",
+    },
+    {
+      id: "transition_to_other_program",
+      label: "Transitioned to other Program:",
+      placeholder: "Enter Amount",
+      type: "text",
+    },
+    {
+      id: "transition_to_other_study",
+      label: "Transitioned to other study:",
+      placeholder: "Enter Amount",
+      type: "text",
+    },
+    
+    
     ]
 
     return ( 
         <form>
+          <hr/>
+          <div className="form-wrap">
+          <h1> Create a Report </h1>
             {formFields.map((field, key) => {
                 return (
                 <div key={`${key}-${field.id}`}>
                     <label htmlFor={field.id}>
                         {field.label}
                     </label>
-                    <input
+                    <input className="login-button"
                         type={field.type}
                         id={field.id}
                         placeholder={field.placeholder}
@@ -176,13 +172,16 @@ function StudentForm(studentData) {
                 </div>
                 )
             })}
-            <button type="submit" onClick={handleSubmit}>
-                Create Student
+            </div>
+
+            <div className="button-wrap">
+            <button className="report-btn" type="submit" onClick={handleSubmit}>
+                Create Report
             </button>
-            <button><Link to="/admin">Admin</Link></button>
-            
+            <button className="report-btn"><Link to="/admin">Admin</Link></button>
+          </div>
         </form>
     )
 }
 
-export default StudentForm;
+export default ReportForm;

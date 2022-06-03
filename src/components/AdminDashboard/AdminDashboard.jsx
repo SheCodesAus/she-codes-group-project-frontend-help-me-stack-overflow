@@ -19,7 +19,7 @@ function AdminDash() {
     <div className="navbar">    
         <h1>Students </h1>    
         <input type="search" className="create-btn" placeholder="Filter by Title"></input>   
-        <button className="create-btn"><Link to="/student">Create new</Link></button>        
+        <button className="create-btn"><Link to="/student/create">Create new</Link></button>        
     </div>
 
     
@@ -50,20 +50,21 @@ function AdminDash() {
                    <a href="?" class="remove-item" title="Remove">Remove</a>
                </td>
            </tr>   
-       </tbody>
+       </tbody>    
    </table>
+   <div className="spacer1"></div>
 
-<div>
-    <br/>
-        <div className="spacer1"></div>
-    <hr/> 
-</div>
+   <div className="viewall-wrap">
+        <button className="viewall-btn"><Link to="/student">View All</Link></button> 
+   </div>
+<hr/> 
+
 
 <div className="box-wrap">
    <div className="navbar">    
         <h1>Programs </h1>    
         <input type="search" className="create-btn" placeholder="Filter by Title"></input>   
-        <button className="create-btn"><Link to="/student">Create new</Link></button>  
+        <button className="create-btn"><Link to="/program/create">Create new</Link></button>  
     </div>
 
    <table class="layout display responsive-table">
@@ -94,19 +95,20 @@ function AdminDash() {
            </tr>   
        </tbody>
    </table>
-</div>
+   <div className="spacer1"></div>
 
-<div>
-    <br/>
-        <div className="spacer1"></div>
-    <hr/> 
+   <div className="viewall-wrap">
+    <button className="viewall-btn"><Link to="/program">View All</Link></button> 
+   </div>
 </div>
+    <hr/> 
+
 
 <div className="box-wrap">
    <div className="navbar">    
         <h1>Reports </h1>    
         <input type="search" className="create-btn" placeholder="Filter by Title"></input>   
-        <button className="create-btn"><Link to="/student">Create new</Link></button>  
+        <button className="create-btn"><Link to="/report/create">Create new</Link></button>  
     </div>
 
    <table class="layout display responsive-table">
@@ -129,17 +131,20 @@ function AdminDash() {
 
 
                <td class="actions">
-                   <a href="?" class="edit-item" title="Edit">Edit</a>
+                   <a href="?" class="edit-item" title="Edit" >Edit</a>                   
                    <a href="?" class="remove-item" title="Remove">Remove</a>
                </td>
            </tr>   
        </tbody>
    </table>
 </div>
-
-
-
-
+<div className="spacer1"></div>
+    <div className="viewall-wrap">
+        <button className="viewall-btn"><Link to="/reports">View All</Link></button> 
+   </div>
+   
+   <hr/>
+   
    </div>
 
    
