@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
+import "./LoginForm.css";
 
  function LoginForm() {
    // State
@@ -38,7 +40,7 @@ import { useNavigate } from "react-router-dom";
          console.log("data", data);
          window.localStorage.setItem("token", data.token);
          window.localStorage.setItem("username", credentials.username);
-         navigate("/");
+         navigate("/admin");
        } catch (err) {
          console.log(err);
        }
@@ -49,8 +51,8 @@ import { useNavigate } from "react-router-dom";
      <form>
        <div className="login">
          <h1>Login</h1>
-         <label htmlFor="username">Username:</label>
-         <input
+         <label htmlFor="username"> Username:</label>
+         <input className="text-input"
            type="text"
            id="username"
            placeholder="Enter username"
@@ -59,18 +61,25 @@ import { useNavigate } from "react-router-dom";
        </div>
        <div className="login">
          <label htmlFor="password">Password:</label>
-         <input
+         <input className="text-input" 
            type="password"
            id="password"
            placeholder="Password"
            onChange={handleChange}
          />
-         <button type="submit" onClick={handleSubmit}>
+         <br></br>
+         <button className="login-button" type="submit" onClick={handleSubmit}>
            Login
          </button>
+         <hr/>
+                
+         <button className="submit-btn" ><Link to="/">Return to Home</Link></button>
+         <button className="submit-btn" ><Link to="/admin">Admin</Link></button>
+
        </div>
      </form>
    );
+  
  }
 
  export default LoginForm; 
