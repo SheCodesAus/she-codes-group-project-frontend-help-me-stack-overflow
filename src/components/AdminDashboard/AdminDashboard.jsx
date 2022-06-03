@@ -50,8 +50,11 @@ function AdminDash() {
                    <a href="?" class="remove-item" title="Remove">Remove</a>
                </td>
            </tr>   
-       </tbody>
+       </tbody>    
    </table>
+   <div className="viewall-wrap">
+        <button className="viewall-btn"><Link to="/student">View All</Link></button> 
+   </div>
 
 <div>
     <br/>
@@ -94,6 +97,10 @@ function AdminDash() {
            </tr>   
        </tbody>
    </table>
+
+   <div className="viewall-wrap">
+   <button className="viewall-btn"><Link to="/program">View All</Link></button> 
+   </div>
 </div>
 
 <div>
@@ -136,9 +143,9 @@ function AdminDash() {
        </tbody>
    </table>
 </div>
-
-
-
+    <div className="viewall-wrap">
+        <button className="viewall-btn"><Link to="/reports">View All</Link></button> 
+   </div>
 
    </div>
 
