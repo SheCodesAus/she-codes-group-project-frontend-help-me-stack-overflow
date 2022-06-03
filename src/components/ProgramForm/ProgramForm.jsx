@@ -138,7 +138,7 @@ function ProgramForm(programData) {
           <hr/>
           
           <div className="form-wrap">
-            <h1> Create a Program </h1>
+            <h1> New Program Form</h1>
             {formFields.map((field, key) => {
                 return (
                 <div key={`${key}-${field.id}`}>
