@@ -162,29 +162,34 @@ function StudentForm(studentData) {
     ]
 
     return ( 
-        <form>
-          <hr/>
-            {formFields.map((field, key) => {
-                return (
-                <div key={`${key}-${field.id}`}>
-                    <label  htmlFor={field.id}>
-                        {field.label}
-                    </label>
-                    <input className="login-button"
-                        type={field.type}
-                        id={field.id}
-                        placeholder={field.placeholder}
-                        onChange={handleChange}
-                    />
-                </div>
-                )
-            })}
-            <button className="submit-btn" type="submit" onClick={handleSubmit}>
-                Create Student
-            </button>
-            <button className="submit-btn"><Link to="/admin">Admin</Link></button>
-            
-        </form>
+      <form>
+      <hr/>
+      <div className="form-wrap">
+      <h1> Create a Student </h1>
+        {formFields.map((field, key) => {
+            return (
+            <div key={`${key}-${field.id}`}>
+                <label htmlFor={field.id}>
+                    {field.label}
+                </label>
+                <input className="login-button"
+                    type={field.type}
+                    id={field.id}
+                    placeholder={field.placeholder}
+                    onChange={handleChange}
+                />
+            </div>
+            )
+        })}
+        </div>
+
+        <div className="button-wrap">
+        <button className="student-btn" type="submit" onClick={handleSubmit}>
+            Create Student
+        </button>
+        <button className="student-btn"><Link to="/admin">Admin</Link></button>
+      </div>
+    </form>
     )
 }
 
