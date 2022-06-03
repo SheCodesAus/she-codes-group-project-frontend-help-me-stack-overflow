@@ -19,6 +19,7 @@ import StudentFormPage from "./pages/StudentFormPage";
 import ReportFormPage from "./pages/ReportFormPage";
 import ProgramFormPage from "./pages/ProgramFormPage";
 import ProgramListPage from "./pages/ProgramListPage";
+import StudentPage from "./pages/StudentPage";
 
 
 function App() {
@@ -36,7 +37,10 @@ function App() {
           <Route path="/reports" element={<SponsorPage />} />  
           <Route path="/report/:id" element={<ReportPage />} />  
           <Route path="/report/create" element={<ReportFormPage />} />  
-          <Route path="/student/create" element={<StudentFormPage />} />  
+          <Route path="/student/create" element={<StudentFormPage />} /> 
+          <Route path="/student" element={<StudentPage />} /> 
+
+
 
 
         </Routes>
