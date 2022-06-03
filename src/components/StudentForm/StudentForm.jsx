@@ -165,7 +165,7 @@ function StudentForm(studentData) {
       <form>
       <hr/>
       <div className="form-wrap">
-      <h1> Create a Student </h1>
+      <h1> New Student Form </h1>
         {formFields.map((field, key) => {
             return (
             <div key={`${key}-${field.id}`}>

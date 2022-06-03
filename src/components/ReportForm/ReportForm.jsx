@@ -156,7 +156,7 @@ function ReportForm(reportData) {
         <form>
           <hr/>
           <div className="form-wrap">
-          <h1> Create a Report </h1>
+          <h1> New Report Form </h1>
             {formFields.map((field, key) => {
                 return (
                 <div key={`${key}-${field.id}`}>
