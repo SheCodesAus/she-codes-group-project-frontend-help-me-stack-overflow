@@ -1,7 +1,5 @@
-
 label {
-    padding: 0.5rem 1rem;
-    text-decoration: underline;
+    padding: 0.5rem 1rem;    
     font: bold;
 }
 .text-input{
@@ -22,12 +20,22 @@ label {
     border-color: purple;
 }
 
-.submit-btn {
-    
-    /* padding: 0.5rem 1rem; */
-    /* font-size: 1.25rem; */
-    line-height: 1.5;
-    border-radius: 100px;
-    border-color: purple;
 
+.home-btn{ 
+    
+    padding: 2px 7px;
+    margin: 3px;
+    border-width: 1px;
+    border-style: outset;
+    border-radius: 4px;
+    font-size: 12px;
+    background-color: #8246AF;
+    color: white;   
+    border: 1px solid #1a1919;
+}
+
+.home-btn:hover  {
+
+    color: #8246AF;
+    background-color: #d4a9f5;
 }
